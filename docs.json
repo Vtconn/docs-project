@@ -51,8 +51,9 @@
           {
             "group": "Aplicativo do inventário",
             "pages": [
-              "inventario/fluxo",
-              "inventario/configuracao"
+              "inventario/estrutura-aplicacao",
+              "inventario/configuracao",
+              "inventario/fluxo"
             ]
           }
         ]
