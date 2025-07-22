@@ -1,0 +1,95 @@
+---
+title: 'Gerar arquivo .apk'
+description: 'Como gerar o .apk para Android'
+---
+
+## Geração da pasta Android
+
+Nos projetos com Expo e React Native para a gereação da aplicação em .apk é necessário uma pasta com o
+código compilado para android em _Java_ e _Kotlin_.
+
+Com esse binário conseguimos abrir em nosso Android Studio e gerar nosso build do app
+
+### Como gerar a pasta Android no Expo
+
+Necessário utilizar o comando:
+
+```sh
+npx expo prebuild --clean
+```
+
+Se atentar a utilizar a flag `--clean` pois ele irá gerar as pastas do zero.
+
+## Configuração do Android Studio
+
+É preciso abrir o Android Studio na pasta que foi gerada do Android dentro do projeto, depois de esperar a inicialização
+do Android Studio e todo o setup do projeto, mude a visualização do projeto para a opção _Android_ no canto superio esquerdo,
+conforme a imagem abaixo.
+
+<img 
+  src="/images/android-studio-folder.png" 
+  alt="Visualização da estrutura de pastas do projeto"
+  height="300"
+  className="rounded-lg"
+/>
+
+Nessa visualização conseguimos verificar as configurações do Gradle que pode ser útil para configurar permisionamento ao app
+como o Wi-Fi por exemplo.
+
+## Gerar o APK
+
+Com o projeto aberto dentro do **Android Studio** clique nos três traços no canto superior direito ao lado do ícone do Android
+depois vá até a opção de `build` e assim selecione a opção `Generate Signed App Bundle or Apk...` com na imagem a seguir
+
+<img 
+  src="/images/gerar-apk.png" 
+  alt="Selecao para geracao do apk"
+  height="300"
+  className="rounded-lg"
+/>
+
+Selecione a geração do _.apk_ e clique em next
+
+<img 
+  src="/images/apk-selection.png" 
+  alt="Apk build select"
+  height="300"
+  className="rounded-lg"
+/>
+
+Gere uma nova keystore somente na primeira vez, depois utilize a já gerada na sua máquina. Para gerar clique em `Create New`
+
+<img 
+  src="/images/keystore-selection.png" 
+  alt="Keystore select"
+  height="300"
+  className="rounded-lg"
+/>
+
+Informe os campos obrigatórios sendo eles:
+
+- Key store path (geralmente pasta do projeto)
+- Password e Confirm
+- Key:
+	- Alias
+	- Password e confirm
+	- First and Last Name
+
+<img 
+  src="/images/new-keystore.png" 
+  alt="New Keystore"
+  height="300"
+  className="rounded-lg"
+/>
+
+Depois só clicar em next e selecionar a opção `release`. Se deixar selecionado a opção `debug` quando instalar o app no celular
+será preciso deixar a aplicação executando no seu ambiente dev, no modo `release` ele funciona sem o seu computador executando o servidor Expo
+
+<img 
+  src="/images/release-apk-build.png" 
+  alt="Release apk"
+  height="300"
+  className="rounded-lg"
+/>
+
+Com a geração concluída o arquivo `.apk` será gerado dentro da pasta `inventario/android/app/` abre a pasta _release_ ou _debug_

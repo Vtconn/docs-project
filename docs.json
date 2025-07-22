@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "VTCONN logo",
+  "name": "VTCONN",
   "colors": {
     "primary": "#FF3C00",
     "light": "#fc6031",
     "dark": "#d83200"
   },
-  "favicon": "/vtconn.svg",
+  "favicon": "/logo/logo.svg",
   "navigation": {
     "tabs": [
       {
@@ -48,6 +48,7 @@
             "pages": [
               "inventario/estrutura-aplicacao",
               "inventario/configuracao",
+              "inventario/gerar-apk",
               "inventario/fluxo"
             ]
           }

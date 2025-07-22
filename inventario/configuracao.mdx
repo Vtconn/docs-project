@@ -3,3 +3,35 @@ title: 'Configuração de desenvolvimento'
 description: 'Instruções para realizar o setup inicial de desenvolvimento'
 ---
 
+## Configuração inicial
+
+Necessário realizar ter as [ferramentas instaladas](/inventario/estrutura-aplicacao.mdx) para realizar a seguinte configuração:
+
+[Configure o seu ambiente](https://docs.expo.dev/get-started/set-up-your-environment/?platform=android&device=simulated&mode=development-build)
+
+Certifique-se que está selecionado as opções de `Android Emulator` e `Development Build` como na imagem abaixo.
+
+<img 
+  src="/images/expo-android-dev-build.png" 
+  alt="Setup de configuracao do expo"
+  height="300"
+  className="rounded-lg"
+/>
+
+## Etapas importantes
+
+Lembre-se de:
+
+- Configurar o `ANDROID_HOME` nas variáveis de ambiente do windows
+- Criar um emulador android com o `Pixel 4a` e sem play store
+- Não é necessário a configuração do **eas** (Expo Aplication Service)
+
+## Comandos
+
+Para executar o projeto é necessário, estar com o _emulador android_ em execução e rodar o comando:
+
+```sh
+npx expo start
+```
+
+Depois clicar na tecla `a` dentro do terminal para abrir no emulador android
