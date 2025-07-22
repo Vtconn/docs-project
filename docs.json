@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "VTCONN logo",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#FF3C00",
+    "light": "#fc6031",
+    "dark": "#d83200"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/vtconn.svg",
   "navigation": {
     "tabs": [
       {
@@ -22,8 +22,7 @@
           {
             "group": "VTXML",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "vtxml/configuracao"
             ]
           },
           {
@@ -35,17 +34,13 @@
           {
             "group": "Navegar",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "navegar/configuracao"
             ]
           },
           {
             "group": "Portal do fornecedor",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "portal-fornecedor/configuracao"
             ]
           },
           {
@@ -61,7 +56,7 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/logo.svg",
+    "dark": "/logo/logo.svg"
   }
 }
