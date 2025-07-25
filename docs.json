@@ -15,33 +15,23 @@
         "groups": [
           {
             "group": "Começando",
-            "pages": [
-              "index"
-            ]
+            "pages": ["index"]
           },
           {
             "group": "VTXML",
-            "pages": [
-              "vtxml/configuracao"
-            ]
+            "pages": ["vtxml/configuracao"]
           },
           {
             "group": "Controle documentos",
-            "pages": [
-              "controle-compras/introducao"
-            ]
+            "pages": ["controle-compras/introducao"]
           },
           {
             "group": "Navegar",
-            "pages": [
-              "navegar/configuracao"
-            ]
+            "pages": ["navegar/configuracao"]
           },
           {
             "group": "Portal do fornecedor",
-            "pages": [
-              "portal-fornecedor/configuracao"
-            ]
+            "pages": ["portal-fornecedor/configuracao"]
           },
           {
             "group": "Aplicativo do inventário",
@@ -51,6 +41,10 @@
               "inventario/gerar-apk",
               "inventario/fluxo"
             ]
+          },
+          {
+            "group": "Polar",
+            "pages": ["polar/projeto-bi"]
           }
         ]
       }

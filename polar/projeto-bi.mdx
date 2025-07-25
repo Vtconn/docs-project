@@ -1,0 +1,42 @@
+---
+title: 'Projeto BI - Fábio Cardillo'
+description: 'Projeto para extração de dados do Protheus'
+---
+
+O projeto consiste em uma API no Protheus que é passado como parâmetro qual query que será executada, ao finalizar a execução da query é gerado um arquivo `.csv` o mesmo é enviado para o SharePoint via API Rest do Office 365
+
+Link de referência do projeto: [Extrator_Direct](https://github.com/Vtconn/Fontes-ADVPL/tree/main/Polar/Extrator_Direct)
+
+## [PHP] - JOB de execução
+
+Todos nós sabemos do problema de execução do JOB no Protheus, para solucionar esse problema, nesse projeto foi criado um script em PHP que faz requisições em uma API do Protheus que executa uma Query e gera um `.csv` para utilização no API.
+
+Esse script basicamente faz requisições na rota do Protheus informando qual query deve ser gerada no momento. E ele é executado de forma automática através da *chron* no Linux.
+
+Observação: esse script está hospeado em um servidor Linux da Polar onde está configurado sua execução automática.
+
+```php
+  // ...
+
+  // Lista de endpoints a serem chamados
+	$endpoints = [
+		'getpol10?codigo=000002'
+
+		/// Adicione mais endpoints aqui
+	];
+
+	// Para cada endpoint é feito a requisição na API pela função `callApi()`
+
+	// Variável para acompanhar o sucesso das requisições
+	$allSuccessful = true;
+
+	// Fazer chamadas sequenciais
+	foreach ($endpoints as $endpoint) {
+		$success = callApi(BASE_URL . $endpoint, $headers);
+
+		// Se alguma chamada falhar, marcar como falso
+		if (!$success) {
+			$allSuccessful = false;
+		}
+	}
+```
