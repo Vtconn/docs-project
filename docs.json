@@ -34,6 +34,10 @@
             "pages": ["portal-fornecedor/configuracao"]
           },
           {
+            "group": "API de Logs",
+            "pages": ["api-logs/como-usar"]
+          },
+          {
             "group": "Aplicativo do inventário",
             "pages": [
               "inventario/estrutura-aplicacao",

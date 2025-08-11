@@ -1,0 +1,51 @@
+---
+title: "Como usar"
+description: "Sistema de logs para os projetos da VTCONN"
+---
+
+No desenvolvimento dos projetos da VTCONN percebemos a necessidade de ter um controle do log das aplicações que temos em execução nos clientes.
+Com isso criamos uma API que tem diversos endpoints, inicialmente utilizaremos dois endpoints, seguindo o fluxo a seguir:
+
+## Dados para acessar
+
+- Rota: http://62.72.9.221:8080
+- Usuário: vtconn_user_auth
+- Senha: Kz7rx3qQ2wt7H9
+
+## Fluxo do sistema
+
+Primeiro é necessário utilizar a rota de autorização onde iremos colocar o usuário e senha cadastro para gerar o token que iremos utilizar na rota que registra os logs
+
+### Gerando Token
+
+Primeiro acessamos a rota [POST - http://62.72.9.221:8080/auth](http://62.72.9.221:8080/auth) e nela dentro de data será retornado um token.
+O token gerado será utilizado no Header das reguisições em todas as outras rotas
+
+### Registrando um log
+
+Rota: [POST - http://62.72.9.221:8080/logs](http://62.72.9.221:8080/logs)
+Header: Authorization - token gerado na auth
+
+Nessa rota precisamos enviar o body em json com a seguinte estrutura:
+
+```json
+{
+    "level": "info",
+    "message": "Teste na api em golang",
+    "project": "teste",
+    "company": "vtconn"
+}
+```
+
+- Level: info | erro | aviso
+- Message: mensagem do log
+- Project: nome do projeto
+- Company: nome da empresa que pertence esse projeto
+
+## Exemplo prático
+
+Aqui temos um exemplo de uso da API em um código em ADVPL
+
+```prw
+
+```
