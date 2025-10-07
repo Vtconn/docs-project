@@ -39,10 +39,6 @@ Dados necessários para enviar no body da requisição:
   "valorFrete": 0000,
   "items": [
     {
-      "descricao": "text",
-      "unidade": "text",
-      "valorUnitario": 00,
-      "valorTotal": 00,
       "cfop": 000000
     }
   ]
@@ -64,6 +60,39 @@ Caso já tenha sido salvo o documento, será retoranado o status 400 e o seguint
 {
   "errorCode": 400,
   "errorMessage": "CTE ja importado anteriormente"
+}
+```
+
+Outros erros serão retornados o status 500
+
+## Salvar uma NFe
+
+Para salvar uma NFe é necessário enviar as informações de cabeçalho e
+
+Dados necessários para enviar no body da requisição:
+
+```json
+{
+  "tipo": "nfe",
+  "chaveNota": "text",
+}
+```
+
+Caso salve a NFe com sucesso, é retornado o seguinte json:
+
+```json
+{
+  "success": true,
+  "message": "NFe salvo com sucesso, chave da nota: numero da chave"
+}
+```
+
+Caso já tenha sido salvo o documento, será retoranado o status 400 e o seguinte json:
+
+```json
+{
+  "errorCode": 400,
+  "errorMessage": "NFe ja importado anteriormente"
 }
 ```
 
