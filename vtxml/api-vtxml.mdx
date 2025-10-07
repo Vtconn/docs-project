@@ -11,6 +11,8 @@ Rota da API [POST]: http://191.252.197.120:8990/rest/restvtxml/saveDocument
 
 Para salvar uma CTe é necessário enviar as informações de cabeçalho e de um único item esse item é buscado através de uma função do ADVPL chamada `U_CP01005G("11", "PRODTRANSP")`
 
+CFOP deve ser salvo como string.
+
 Dados necessários para enviar no body da requisição:
 
 ```json
@@ -39,7 +41,7 @@ Dados necessários para enviar no body da requisição:
   "valorFrete": 0000,
   "items": [
     {
-      "cfop": 000000
+      "cfop": "0000"
     }
   ]
 }
