@@ -15,27 +15,40 @@
         "groups": [
           {
             "group": "Começando",
-            "pages": ["index"]
+            "pages": [
+              "index"
+            ]
           },
           {
             "group": "VTXML",
-            "pages": ["vtxml/configuracao"]
+            "pages": [
+              "vtxml/configuracao",
+              "vtxml/api-vtxml"
+            ]
           },
           {
             "group": "Controle documentos",
-            "pages": ["controle-compras/introducao"]
+            "pages": [
+              "controle-compras/introducao"
+            ]
           },
           {
             "group": "Navegar",
-            "pages": ["navegar/configuracao"]
+            "pages": [
+              "navegar/configuracao"
+            ]
           },
           {
             "group": "Portal do fornecedor",
-            "pages": ["portal-fornecedor/configuracao"]
+            "pages": [
+              "portal-fornecedor/configuracao"
+            ]
           },
           {
             "group": "API de Logs",
-            "pages": ["api-logs/como-usar"]
+            "pages": [
+              "api-logs/como-usar"
+            ]
           },
           {
             "group": "Aplicativo do inventário",
@@ -48,7 +61,9 @@
           },
           {
             "group": "Polar",
-            "pages": ["polar/projeto-bi"]
+            "pages": [
+              "polar/projeto-bi"
+            ]
           }
         ]
       }
