@@ -1,0 +1,48 @@
+---
+title: 'API do VTXML'
+description: 'API para poder salvar NFe e CTe via REST'
+---
+
+A API está configurada para receber os dados pelo mesmo endpoint, a diferença será feita pelo campo `tipo` no body da requisição, e dependo do body será necessário enviar diferente json na requisição
+
+## Salvar uma CTe
+
+Para salvar uma CTe é necessário enviar as informações de cabeçalho e de um único item esse item é buscado através de uma função do ADVPL chamada `U_CP01005G("11", "PRODTRANSP")`
+
+Dados necessários para enviar no body da requisição:
+
+```json
+{
+  "tipo": "cte",
+  "chaveNota": "text",
+  "numeroNota": "text",
+  "serieNota": "text",
+  "dataNota": "dd/mm/yyyy",
+  "tipoNota": "text",
+  "tipoPE": "text",
+  "naturezaOperacao": "text",
+  "cnpj": "text",
+  "razaoSocial": "text",
+  "uf": "text",
+  "valorTotal": 0000,
+  "notaValida": "text",
+  "status": "text",
+  "codigoEmpresa": "text",
+  "codigoFilial": "text",
+  "chaveReferencia": "text",
+  "dataImpressao": "dd/mm/yyyy",
+  "horarioImpressao": "text",
+  "usuarioImpressao": "text",
+  "codigoAdd": "text",
+  "valorFrete": 0000,
+  "items": [
+    {
+      "descricao": "text",
+      "unidade": "text",
+      "valorUnitario": 00,
+      "valorTotal": 00,
+      "cfop": 000000
+    }
+  ]
+}
+```
