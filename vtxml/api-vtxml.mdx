@@ -147,3 +147,12 @@ data.xml.CTe.infCte.imp.ICMS.ICMS00.pICMS
 **Valor do ICMS:**
 data.xml.CTe.infCte.imp.ICMS.ICMS00.vICMS
 ```
+
+## Status code retorno da API
+
+| Status | Descrição |
+| ------ | --------- |
+| 201 | Nota salva com sucesso |
+| 400 | Quando envia um tipo incorreto diferente de `cte` ou `nfe` |
+| 409 | Nota já importada anteriormente |
+| 500 | Erro interno |
